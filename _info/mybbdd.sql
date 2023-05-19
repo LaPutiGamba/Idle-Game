@@ -26,7 +26,7 @@ CREATE TABLE USERS (
     password VARCHAR(32) NOT NULL,
     email VARCHAR(256),
     experience INT,
-    diamons INT, -- Coin for accelerate actions, buy coins, etc
+    diamonds INT DEFAULT 100, -- Coin for accelerate actions, buy coins, etc
 
     /* USER MATERIALS SAVED IN THE BARN */
     wheat INT,
@@ -35,6 +35,9 @@ CREATE TABLE USERS (
     sugarCane INT,
     carrot INT,
     pumpkin INT,
+    eggs INT,
+	milk INT,
+	bacon INT,
 
     /* USER TIME OF MATERIALS */
     timeFieldCrop1 INT,
@@ -43,6 +46,9 @@ CREATE TABLE USERS (
     timeFieldCrop4 INT,
     timeFieldCrop5 INT,
     timeFieldCrop6 INT,
+    timeCoops1 INT,
+    timeCoops2 INT,
+    timeCoops3 INT,
 
     /* USER SELECTION FOR EACH FIELD CROP */
     cropInField1 INT,

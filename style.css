@@ -33,45 +33,85 @@ body {
   background-image: url("./images/fieldCrops.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 189.75px;
-  height: 135px;
+  width: 193.75px;
+  height: 203.75px;
   position: relative;
   display: inline-block;
-  margin: 0px 9.6px 9.6px 0px;
+  margin: 0px 9.6px 9.6px 5px;
 }
 
 .wheat {
 	position: absolute;
-	top: 29px;
+	top: 135px;
   left: 4px;
 }
 
 .corn {
   position: absolute;
-  top: 29px;
+  top: 135px;
   left: 34px;
 }
 
 .soyBean {
   position: absolute;
-  top: 29px;
+  top: 135px;
   left: 66px;
 }
 
 .sugarCane {
   position: absolute;
-  top: 29px;
+  top: 135px;
   left: 100px;
 }
 
 .carrot {
   position: absolute;
-  top: 29px;
+  top: 135px;
   left: 124px;
 }
 
 .pumpkin {
   position: absolute;
-  top: 29px;
+  top: 135px;
   left: 154px;
+}
+
+.coops {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 197px;
+  height: 165px;
+  position: relative;
+  display: inline-block;
+  margin: 0px 9.6px 9.6px 9.6px;
+}
+
+#coop1 {
+  background-image: url("./images/chickenCoop.png");
+}
+
+#coop2 {
+  background-image: url("./images/cowPasture.png");
+}
+
+#coop3 {
+  background-image: url("./images/pigPen.png");
+}
+
+#chicken {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+#cow {
+  position: absolute;
+  top: 35px;
+  left: 71px;
+}
+
+#pig {
+  position: absolute;
+  top: 35px;
+  left: 65px;
 }

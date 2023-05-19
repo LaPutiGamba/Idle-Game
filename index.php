@@ -13,11 +13,11 @@
 			<h2>Register</h2>
 			<form method="post" action="php/selectFunction.php?selectFunction=1">
 				<label>Email</label>
-				<input type="email" name="email"></input><br>
+				<input type="email" name="email" required></input><br>
 				<label>Username</label>
-				<input type="text" name="username"></input><br>
+				<input type="text" name="username" required></input><br>
 				<label>Password</label>
-				<input type="password" name="password" minlength="8"></input><br>
+				<input type="password" name="password" minlength="8" required></input><br>
 				<input type="submit" value="REGISTER"></input>
 			</form>
 

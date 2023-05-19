@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<header>
+<title>
+Test AJAX-PHP
+</title>
+<style>
+div {
+  border: 1px solid black;
+  padding: 50px;
+  background-color: lightblue;
+}
+</style>
+</header>
+<body>
+<script>
+
+var Valor = 0;
+var ValorEnTemps = 0;
+var ValorBBDD = 0;
+
+function loadFile() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("premi").innerHTML = this.responseText;
+    }
+  xhttp.open("GET", "canviHTML.php", true);
+  xhttp.send();
+}
+
+function changeData() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    Valor = parseInt(this.responseText);
+	document.getElementById("numero").innerHTML = Valor;
+    }
+  xhttp.open("GET", "canviDADA.php", true);
+  xhttp.send();
+}
+
+setInterval(canviEnTemps,100);
+
+function canviEnTemps() {
+	ValorEnTemps+=100;
+	document.getElementById("temps").innerHTML = ValorEnTemps;
+}
+
+function changeDataBBDD() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    ValorBBDD = parseInt(this.responseText);
+	document.getElementById("dadaBBDD").innerHTML = ValorBBDD;
+    }
+  xhttp.open("GET", "canviDADABBDD.php", true);
+  xhttp.send();
+}
+
+function sendDataBBDD() {
+  var dada = document.getElementById("numeroEnviar").value
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "enviaDADABBDD.php?valor=" + dada, true);
+  xhttp.send();
+}
+
+</script>
+
+<div id="demo">
+  <p><button type="button" onclick="loadFile()">Actualitza Premi</button></p>
+  <p><button type="button" onclick="changeData()">Actualitza Valor</button></p>
+    <p><button type="button" onclick="changeDataBBDD()">Afaga de BBDD</button></p>
+	    <p><input type="text" id="numeroEnviar"><button type="button" onclick="sendDataBBDD()">Envia a BBDD</button></p>
+</div>
+<div id="demo2">
+Has guanyat un <span id="premi"></span>
+</div>
+<div id="demo3">
+El valor ha canviat a <span id="numero"></span>
+</div>
+<div id="demo4">
+Aquest valor cambia amb el temps <span id="temps"></span>
+</div>
+<div id="demo5">
+Aquest valor s'agafa de la base de dades: <span id="dadaBBDD"></span>
+</div>
+
+</body>
+</html>
